@@ -1,7 +1,7 @@
 # Machine Learning Engineer Nanodegree
 ## Capstone Proposal
-Joe Udacity  
-December 31st, 2050
+George Vargas
+Date TBD
 
 ## Proposal
 _(approx. 2-3 pages)_
@@ -10,6 +10,12 @@ _(approx. 2-3 pages)_
 _(approx. 1-2 paragraphs)_
 
 In this section, provide brief details on the background information of the domain from which the project is proposed. Historical information relevant to the project should be included. It should be clear how or why a problem in the domain can or should be solved. Related academic research should be appropriately cited in this section, including why that research is relevant. Additionally, a discussion of your personal motivation for investigating a particular problem in the domain is encouraged but not required.
+
+Accurately predicting the financial markets has long been the holy grail for all types of investors. Many individual investors seek this grail but never find it. This tends to be because many underestimate the extreme complexity of the financial markets. Though many fail some individual investors do attain moderate success implementing trading systems that work for the highly-focused conditions in which they find themselevs trading. Replicating these systems is somehwat trivial, however, replicating the human interpretation of these systems is a non-trivial task.
+
+Approaching the problem as a hedgefund would it can be found that the success rate of any particular trade can be significantly increased by considering the system as components all feeding a decision engine, much like neurons in a neural network feed the output layer. (Renaissance tech citation) While these systems are made of many complex components one of the components that has been increasing in popularity in recent years is sentiment analysis.  News, blog and twitter posts data mining has been proven to increase the probability of a successful trade cited in these papers(TBD).
+
+In this proposal we will attempt to replicate the human interpretation for one component of a larger trading system. What is meant by this is that we would like to achieve super human results when utilizing news to make trade decisions on the US stock markets. 
 
 ### Problem Statement
 _(approx. 1 paragraph)_
