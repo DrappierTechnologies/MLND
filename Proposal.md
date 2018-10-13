@@ -15,12 +15,14 @@ Accurately predicting the financial markets has long been the holy grail for all
 
 Approaching the problem as a hedgefund might it can be found that the success rate of any particular trade can be significantly increased by considering the system as components all feeding a decision engine, much like neurons in a neural network feed the output layer. While these systems are made of many complex components there has been increasing focus on alternative data and it's use in sentiment analysis components. News, blog and twitter posts data mining has been proven to increase the probability of a successful trade.[[2]](https://arxiv.org/pdf/1010.3003.pdf)[[3]](http://cs229.stanford.edu/proj2015/029_report.pdf).
 
-In this proposal we will attempt to replicate the human interpretation for one component of a larger trading system. What is meant by this is that we would like to achieve super human results when utilizing news to make trade decisions on the US stock markets. 
+My personal motivation for attempting to solve this problem is purely for my own financial independence. As a hobbyist day trader I've been somewhat profitable but my time is limited because of my full-time employment. Having the ability to create a trading system with the ability to trade as I do but not have the time limitations that I have would be an extremely valuable step toward achieveing financial independence.
 
 ### Problem Statement
 _(approx. 1 paragraph)_
 
 In this section, clearly describe the problem that is to be solved. The problem described should be well defined and should have at least one relevant potential solution. Additionally, describe the problem thoroughly such that it is clear that the problem is quantifiable (the problem can be expressed in mathematical or logical terms) , measurable (the problem can be measured by some metric and clearly observed), and replicable (the problem can be reproduced and occurs more than once).
+
+In this proposal we will attempt to replicate the human interpretation for one component of a larger trading system. What is meant by this is that we would like to achieve super human results when utilizing news to make trade decisions on the US stock markets. 
 
 ### Datasets and Inputs
 _(approx. 2-3 paragraphs)_
