@@ -18,7 +18,7 @@ _(approx. 1 paragraph)_
 
 In this section, clearly describe the problem that is to be solved. The problem described should be well defined and should have at least one relevant potential solution. Additionally, describe the problem thoroughly such that it is clear that the problem is quantifiable (the problem can be expressed in mathematical or logical terms) , measurable (the problem can be measured by some metric and clearly observed), and replicable (the problem can be reproduced and occurs more than once).
 
-In this proposal we will attempt to replicate the human interpretation for one component of a larger trading system. What is meant by this is that we would like to achieve super human results when utilizing news to make trade decisions on the US stock markets. 
+In this capstone we will attempt to predict whether the Dow Jones Indistrial Average will close up or close down based on sentiment analysis performed on the news headlines of that day. 
 
 ### Datasets and Inputs
 
@@ -30,6 +30,8 @@ For our purposes we will exclude the data up to April 2009. The reason for exclu
 _(approx. 1 paragraph)_
 
 In this section, clearly describe a solution to the problem. The solution should be applicable to the project domain and appropriate for the dataset(s) or input(s) given. Additionally, describe the solution thoroughly such that it is clear that the solution is quantifiable (the solution can be expressed in mathematical or logical terms) , measurable (the solution can be measured by some metric and clearly observed), and replicable (the solution can be reproduced and occurs more than once).
+
+
 
 ### Benchmark Model
 _(approximately 1-2 paragraphs)_
@@ -45,6 +47,10 @@ In this section, propose at least one evaluation metric that can be used to quan
 _(approx. 1 page)_
 
 In this final section, summarize a theoretical workflow for approaching a solution given the problem. Provide thorough discussion for what strategies you may consider employing, what analysis of the data might be required before being used, or which algorithms will be considered for your implementation. The workflow and discussion that you provide should align with the qualities of the previous sections. Additionally, you are encouraged to include small visualizations, pseudocode, or diagrams to aid in describing the project design, but it is not required. The discussion should clearly outline your intended workflow of the capstone project.
+
+In an attempt to predict the direction of the DJIA we will first take the top twenty-five user upvoted headlines and convert the words to vectors utilizing the [fastText pyhton library](https://github.com/facebookresearch/fastText) created by the facebook research team. The reason for utilizing this library over word2vec or gLoVe is that fastText creates word embeddings from character n-grams instead of words. This creates a much more specific representation for each word and also allows us to construct vectors that are outside of the corpus which may come in useful when generalizing against the portions of the dataset that are held out for validation, testing and generalization.
+
+Once the headlines have been converted into vectors we will implemen
 
 -----------
 
