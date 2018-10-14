@@ -31,9 +31,7 @@ _(approx. 1 paragraph)_
 
 In this section, clearly describe a solution to the problem. The solution should be applicable to the project domain and appropriate for the dataset(s) or input(s) given. Additionally, describe the solution thoroughly such that it is clear that the solution is quantifiable (the solution can be expressed in mathematical or logical terms) , measurable (the solution can be measured by some metric and clearly observed), and replicable (the solution can be reproduced and occurs more than once).
 
-In this captsone we will work toward attempting to derive sentiment from news headlines for a specific day and use that analysis to predict the upward or downward movement of an index for that same day.
-
-In this capstone we will attempt to predict whether the Dow Jones Indistrial Average will close up or close down based on sentiment analysis performed on the news headlines of that day. 
+In this capstone we will attempt to predict whether the Dow Jones Indistrial Average will close up or close down based on sentiment analysis performed on the news headlines of that day. We will be using word embeddings to prepare our text data to be fed to a supervised model. Our prediction value will be the label from the combined dataset denoting the upward or downward movement of the DJIA for that particular day.
 
 ### Benchmark Model
 _(approximately 1-2 paragraphs)_
