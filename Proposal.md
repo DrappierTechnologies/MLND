@@ -11,14 +11,14 @@ Accurately predicting the financial markets has long been the holy grail for all
 
 Approaching the problem as a hedgefund might it can be found that the success rate of any particular trade can be significantly increased by considering the system as components all feeding a decision engine, much like neurons in a neural network feed the output layer. While these systems are made of many complex components there has been increasing focus on alternative data and it's use in sentiment analysis components. News, blog and twitter posts data mining has been proven to increase the probability of a successful trade.[[2]](https://arxiv.org/pdf/1010.3003.pdf)[[3]](http://cs229.stanford.edu/proj2015/029_report.pdf).
 
-My personal motivation for attempting to solve this problem is purely for my own financial independence. As a hobbyist day trader I've been somewhat profitable but my time is limited because of my full-time employment. Having the ability to create a trading system with the ability to trade as I do but not have the time limitations that I have would be an extremely valuable step toward achieveing financial independence.
+My personal motivation for looking at possible solutions to this task is purely for my own financial independence. As a hobbyist day trader I've been somewhat profitable but my time is limited because of my full-time employment. Having the ability to create a trading system with the ability to trade as I do but not have the time limitations that I have would be an extremely valuable step toward achieveing financial independence.
 
 ### Problem Statement
 _(approx. 1 paragraph)_
 
 In this section, clearly describe the problem that is to be solved. The problem described should be well defined and should have at least one relevant potential solution. Additionally, describe the problem thoroughly such that it is clear that the problem is quantifiable (the problem can be expressed in mathematical or logical terms) , measurable (the problem can be measured by some metric and clearly observed), and replicable (the problem can be reproduced and occurs more than once).
 
-In this capstone we will attempt to predict whether the Dow Jones Indistrial Average will close up or close down based on sentiment analysis performed on the news headlines of that day. 
+The problem with financial markets is that they are largely driven by sentiment. Even in a time when a majority of the trades are being placed by sophicated bots sentiment still rules the market. This can be seen by the effect Trump's tweets have on the stock of the particular companies he targets. Deriving these sentiments from text sources and attempting to reliably use them to predict market movements will be the problem this capstone attempts to solve.
 
 ### Datasets and Inputs
 
@@ -31,7 +31,9 @@ _(approx. 1 paragraph)_
 
 In this section, clearly describe a solution to the problem. The solution should be applicable to the project domain and appropriate for the dataset(s) or input(s) given. Additionally, describe the solution thoroughly such that it is clear that the solution is quantifiable (the solution can be expressed in mathematical or logical terms) , measurable (the solution can be measured by some metric and clearly observed), and replicable (the solution can be reproduced and occurs more than once).
 
+In this captsone we will work toward attempting to derive sentiment from news headlines for a specific day and use that analysis to predict the upward or downward movement of an index for that same day.
 
+In this capstone we will attempt to predict whether the Dow Jones Indistrial Average will close up or close down based on sentiment analysis performed on the news headlines of that day. 
 
 ### Benchmark Model
 _(approximately 1-2 paragraphs)_
