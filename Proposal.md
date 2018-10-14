@@ -4,12 +4,8 @@ George Vargas
 Date TBD
 
 ## Proposal
-_(approx. 2-3 pages)_
 
 ### Domain Background
-_(approx. 1-2 paragraphs)_
-
-In this section, provide brief details on the background information of the domain from which the project is proposed. Historical information relevant to the project should be included. It should be clear how or why a problem in the domain can or should be solved. Related academic research should be appropriately cited in this section, including why that research is relevant. Additionally, a discussion of your personal motivation for investigating a particular problem in the domain is encouraged but not required.
 
 Accurately predicting the financial markets has long been the holy grail for all types of investors. Many individual investors seek this grail but never find it. This tends to be because many underestimate the extreme complexity of the financial markets. Though many fail some individual investors do attain moderate success implementing trading systems that work for the highly-focused conditions in which they find themselevs trading.  Likewise some hedgefunds, such as Renaissance Technologies, achieve great success building complexing trading systems based on standard and alternative data whilst utilizing much more scientific methods for decision making.[[1]]((https://www.linkedin.com/pulse/20141117150538-17004994-pure-alpha-story-of-renaissance-technologies/))
 
@@ -25,9 +21,10 @@ In this section, clearly describe the problem that is to be solved. The problem 
 In this proposal we will attempt to replicate the human interpretation for one component of a larger trading system. What is meant by this is that we would like to achieve super human results when utilizing news to make trade decisions on the US stock markets. 
 
 ### Datasets and Inputs
-_(approx. 2-3 paragraphs)_
 
-In this section, the dataset(s) and/or input(s) being considered for the project should be thoroughly described, such as how they relate to the problem and why they should be used. Information such as how the dataset or input is (was) obtained, and the characteristics of the dataset or input, should be included with relevant references and citations as necessary It should be clear how the dataset(s) or input(s) will be used in the project and whether their use is appropriate given the context of the problem.
+The datasets used are from Kaggle, specifically [these datasets](https://www.kaggle.com/aaron7sun/stocknews#Combined_News_DJIA.csv) provided by a user in the community. The datasets span approximately eight years from August 2008 to July 2016. Contained is a dataset of the Dow Jones Industrial Average price history with columns including Date, Open, High, Low, Close, Volume and Adj Close; A dataset of Reddit news and a combined dataset with a Dow Jones Industrial Average label and a column each for one of the top twenty-five user upvoted headlines for that day. The label has a value of either "1" for DJIA closing up and "0" for DJIA closing down. The provider of the dataset recommends using data from 2008-08-08 to 2014-12-31 for training and data from 2015-01-02 to 2016-07-01 for testing since this splits the overall dataset in an 80/20 fashion. 
+
+For our purposes we will exclude the data up to April 2009. The reason for excluding this data in training, validation and testing is because leading up to April 2009 the market was in a strong downward trend that was a direct result of the housing market crash. Aside from training, validating and tetsing for correlation between news sentiment and the DJIA closing up or down we will be reserving the data up to April 2009 as an additional test to see if the model can generalize from being trained in only a bull market to succeeding in a predominantly bear market.
 
 ### Solution Statement
 _(approx. 1 paragraph)_
