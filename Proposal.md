@@ -18,7 +18,7 @@ _(approx. 1 paragraph)_
 
 In this section, clearly describe the problem that is to be solved. The problem described should be well defined and should have at least one relevant potential solution. Additionally, describe the problem thoroughly such that it is clear that the problem is quantifiable (the problem can be expressed in mathematical or logical terms) , measurable (the problem can be measured by some metric and clearly observed), and replicable (the problem can be reproduced and occurs more than once).
 
-The problem with financial markets is that they are largely driven by sentiment. Even in a time when a majority of the trades are being placed by sophicated bots sentiment still rules the market. This can be seen by the effect Trump's tweets have on the stock of the particular companies he targets. Deriving these sentiments from text sources and attempting to reliably use them to predict market movements will be the problem this capstone attempts to solve.
+The problem with financial markets is that they are largely driven by sentiment. Even in a time when a majority of the trades are being placed by sophicated bots sentiment still rules the market. This can be seen by the effect Trump's tweets have on the stock of the particular companies he targets. Deriving these sentiments from text sources and using them to reliably predict market movements will be the problem this capstone attempts to solve.
 
 ### Datasets and Inputs
 
