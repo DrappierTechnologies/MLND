@@ -14,9 +14,6 @@ Approaching the problem as a hedgefund might it can be found that the success ra
 My personal motivation for looking at possible solutions to this task is purely for my own financial independence. As a hobbyist day trader I've been somewhat profitable but my time is limited because of my full-time employment. Having the ability to create a trading system with the ability to trade as I do but not have the time limitations that I have would be an extremely valuable step toward achieveing financial independence.
 
 ### Problem Statement
-_(approx. 1 paragraph)_
-
-In this section, clearly describe the problem that is to be solved. The problem described should be well defined and should have at least one relevant potential solution. Additionally, describe the problem thoroughly such that it is clear that the problem is quantifiable (the problem can be expressed in mathematical or logical terms) , measurable (the problem can be measured by some metric and clearly observed), and replicable (the problem can be reproduced and occurs more than once).
 
 The problem with financial markets is that they are largely driven by sentiment. Even in a time when a majority of the trades are being placed by sophicated bots sentiment still rules the market. This can be seen by the effect Trump's tweets have on the stock of the particular companies he targets. Deriving these sentiments from text sources and using them to reliably predict market movements will be the problem this capstone attempts to solve.
 
@@ -27,28 +24,20 @@ The datasets used are from Kaggle, specifically [these datasets](https://www.kag
 For our purposes we will exclude the data up to April 2009. The reason for excluding this data in training, validation and testing is because leading up to April 2009 the market was in a strong downward trend that was a direct result of the housing market crash. Aside from training, validating and tetsing for correlation between news sentiment and the DJIA closing up or down we will be reserving the data up to April 2009 as an additional test to see if the model can generalize from being trained in only a bull market to succeeding in a predominantly bear market.
 
 ### Solution Statement
-_(approx. 1 paragraph)_
 
-In this section, clearly describe a solution to the problem. The solution should be applicable to the project domain and appropriate for the dataset(s) or input(s) given. Additionally, describe the solution thoroughly such that it is clear that the solution is quantifiable (the solution can be expressed in mathematical or logical terms) , measurable (the solution can be measured by some metric and clearly observed), and replicable (the solution can be reproduced and occurs more than once).
-
-In this capstone we will attempt to predict whether the Dow Jones Indistrial Average will close up or close down based on sentiment analysis performed on the news headlines of that day. We will be using word embeddings to prepare our text data to be fed to a supervised model. Our prediction value will be the label from the combined dataset denoting the upward or downward movement of the DJIA for that particular day.
+In this capstone we will attempt to predict whether the Dow Jones Indistrial Average will close up or close down based on sentiment analysis performed on the news headlines of that day. We will be using word embeddings to prepare our text data to be fed to a supervised model. Our prediction value will be the label from the combined dataset denoting the upward or downward movement of the DJIA for a given day.
 
 ### Benchmark Model
-_(approximately 1-2 paragraphs)_
-
-In this section, provide the details for a benchmark model or result that relates to the domain, problem statement, and intended solution. Ideally, the benchmark model or result contextualizes existing methods or known information in the domain and problem given, which could then be objectively compared to the solution. Describe how the benchmark model or result is measurable (can be measured by some metric and clearly observed) with thorough detail.
 
 Although anecdotal most individual investors will cite roughly a fifty to fifty-five percent accuracy when trading. This is mainly gathered from watching students in trading programs or from discussions with other individual investors. Anecdotal information isn't necessarily considered reliable, however, this researcher is inclined to believe such claims as most trading programs require students to methodically write down every trade(entry, exit, stoploss, etc.) before placing a trade. This is done to develop discipline and help remove emotion from the trades which is one of the most important factors for becoming a successful individual investor.
 
-Now, fifty to fifty-five may seem like slim margins but keep in mind that with just a fifty-one percent win percentage and proper risk management card counters can effectively clean house at casino. Also considering that the data spans a period of time where the market was particularly bullish we will be using the [sklearn.dummy.DummyClassifier](http://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyClassifier.html) in an effort to benchmark against the multiple simple strategies provide by the dummy classifier. This will help figure out if the bullish bias in the data can be exploited via simpler means.
+Now, fifty to fifty-five may seem like slim margins but keep in mind that with just a fifty-one percent win percentage and proper risk management card counters can effectively clean house at casinos. Also considering that the data spans a period of time where the market was particularly bullish we will be using the [sklearn.dummy.DummyClassifier](http://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyClassifier.html) in an effort to benchmark against the multiple simple strategies provide by the dummy classifier. This will help figure out if the bullish bias in the data can be exploited via simpler means.
 
 ### Evaluation Metrics
-_(approx. 1-2 paragraphs)_
 
-In this section, propose at least one evaluation metric that can be used to quantify the performance of both the benchmark model and the solution model. The evaluation metric(s) you propose should be appropriate given the context of the data, the problem statement, and the intended solution. Describe how the evaluation metric(s) are derived and provide an example of their mathematical representations (if applicable). Complex evaluation metrics should be clearly defined and quantifiable (can be expressed in mathematical or logical terms).
+To get a better idea of what is going on with the model we will be utilizing a few different metrics to evaluate the performance against the benchmark model. Firstly, we will look at accuracy just to give us a general idea of the model's performance. This will be followed up by a dive into the root mean squared error and mean average percentage error. These will help us gauge, more objectively, how close the model predictions are to the actuals.
 
 ### Project Design
-_(approx. 1 page)_
 
 In this final section, summarize a theoretical workflow for approaching a solution given the problem. Provide thorough discussion for what strategies you may consider employing, what analysis of the data might be required before being used, or which algorithms will be considered for your implementation. The workflow and discussion that you provide should align with the qualities of the previous sections. Additionally, you are encouraged to include small visualizations, pseudocode, or diagrams to aid in describing the project design, but it is not required. The discussion should clearly outline your intended workflow of the capstone project.
 
