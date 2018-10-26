@@ -1,7 +1,7 @@
 # Machine Learning Engineer Nanodegree
 ## Capstone Proposal
 George Vargas
-Date TBD
+October 2018
 
 ## Proposal
 
@@ -41,20 +41,22 @@ To get a better idea of what is going on with the model we will be utilizing a f
 
 First the dataset will be split to create the previously discussed bearish holdout set. After which the rest of the data will be split into two portions; one for training and the other for testing.
 
-In order to be able to feed the text from the dataset to a classification model some preprocessing is required. Based on preliminary research the most effective method currently used for text classification is the conversion of words and sentences to vectors[TBD referecne]. While there are several libraries that are popular for this task and provide good performance the one chosen to be utilized is the InferSent library with fastText used for the underlying word vectorization task.[[6]](https://github.com/facebookresearch/InferSent)[[7]](https://github.com/facebookresearch/fastText) The reason for utilizing this library over word2vec or gLoVe is that fastText creates word representations from word n-grams, referred to as skipgrams, in a convolution-like manner instead of creating the representations from entire words or sentences. This helps piece together a much more specific representation for each word and also facilitates the construction of vectors on words that are outside of the training corpus which will be useful when generalizing against the portion of the dataset that was held out for testing generalization to the bear market of 2008. InferSent will utilize fastText to generate a vector representation for the entire sentence that was passed based on the previously generated word representations. Since the headlines in the data are mostly single sentences or phrases this should make it much easier to train a model that provides a high predictive accuracy.
+In order to be able to feed the text from the dataset to a classification model some preprocessing is required. Based on preliminary research the most effective method currently used for text classification is the conversion of words and sentences to vectors.[[6]](https://www.researchgate.net/publication/315717021_Word_Embedding_for_Understanding_Natural_Language_A_Survey) While there are several libraries that are popular for this task and provide good performance the one chosen to be utilized is the InferSent library with fastText used for the underlying word vectorization task.[[7]](https://arxiv.org/pdf/1705.02364.pdf)[[8]](https://arxiv.org/abs/1607.04606) The reason for utilizing this library over word2vec or gLoVe is that fastText creates word representations from word n-grams, referred to as skipgrams, in a convolution-like manner instead of creating the representations from entire words or sentences. This helps piece together a much more specific representation for each word and also facilitates the construction of vectors on words that are outside of the training corpus which will be useful when generalizing against the portion of the dataset that was held out for testing generalization to the bear market of 2008. InferSent will utilize fastText to generate a vector representation for the entire sentence that was passed based on the previously generated word representations. Since the headlines in the data are mostly single sentences or phrases this should make it much easier to train a model that provides a high predictive accuracy.
 
-To aid in preprocessing we will build a pipeline to feed a raw dataset with the same schema as the initial set and return two fully preprocessed datasets. The pipeline will expand contractions and produce two separate datasets; one which includes stop words and one which has been stripped of stop words. This creation of the two separate datasets is to observe any difference in performance when stop words are removed [TBD Why stop words may affect performance]. Based on some cursory research,  InferSent with fastText seem to be quite flexible and effective without the need for heavy preprocessing.[TBD reference] If the results of the model are very poor the pipeline may be revisted to add more of the preprocessing that is typically found in text classification tasks.
+To aid in preprocessing we will build a pipeline to feed a raw dataset with the same schema as the initial set and return two fully preprocessed datasets. The pipeline will expand contractions and produce two separate datasets; one which includes stop words and one which has been stripped of stop words. This creation of the two separate datasets is to observe any difference in performance when stop words are removed.[[9]](http://www.lrec-conf.org/proceedings/lrec2014/pdf/292_Paper.pdf) Based on on the documentation,  InferSent with fastText seem to be quite flexible and effective without the need for heavy preprocessing. If the results of the model are very poor the pipeline may be revisted to add more of the preprocessing that is typically found in text classification tasks.
 
 After preprocessing the training text, the datasets will be passed into two different InferSent models for vectorization. InferSent will output a vector for each headline which will be used to populate a new dataset where the headlines have been replaced with their vector representations. Once the headlines have been converted into word embeddings we will perform some cursory analysis of the data. This will help us to visualize aspects such as trends over time, distribution, frequency, popularity of headlines and other trends.
 
 Upon completion of a cursory analysis, the datasets will be fed to a support vector classifier for training. The test set will then be preprocessed, vectorized independently of the previous InferSent models, and used to predict against the trained SVC. The predictions will be used to test for overfitting, underfitting and general performance. If the performance of the trained model is adequate the bearish holdout set will follow the same process to see if the model is biased to bullish markets due to the data on which it was trained.
 
------------
+#### References
 
-**Before submitting your proposal, ask yourself. . .**
-
-- Does the proposal you have written follow a well-organized structure similar to that of the project template?
-- Is each section (particularly **Solution Statement** and **Project Design**) written in a clear, concise and specific fashion? Are there any ambiguous terms or phrases that need clarification?
-- Would the intended audience of your project be able to understand your proposal?
-- Have you properly proofread your proposal to assure there are minimal grammatical and spelling mistakes?
-- Are all the resources used for this project correctly cited and referenced?
+<br />[1] A. Gneushev (2014) [*Pure Alpha: Story of Renaissance Technologies*](https://www.linkedin.com/pulse/20141117150538-17004994-pure-alpha-story-of-renaissance-technologies/)
+<br />[2] J. Bollen*, H. Mao*, and X. Zeng (2010) [*Twitter mood predicts the stock market.*](https://arxiv.org/pdf/1010.3003.pdf)
+<br />[3] S. Colianni, S. Rosales, and M. Signorotti (2015) [*Algorithmic Trading of Cryptocurrency Based on Twitter Sentiment Analysis*](http://cs229.stanford.edu/proj2015/029_report.pdf)
+<br />[4] Aaron7sun (2016) [*Dataset: Daily News for Stock Market Prediction*](https://www.kaggle.com/aaron7sun/stocknews#Combined_News_DJIA.csv)
+<br />[5] scikit-learn developers (2007-2018) [*DummyClassifier*](http://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyClassifier.html)
+<br />[6] Y. Li and T. Yang (2017) *Word Embedding for Understanding Natural Language: A Survey*](https://www.researchgate.net/publication/315717021_Word_Embedding_for_Understanding_Natural_Language_A_Survey)
+<br />[7] A. Conneau, D. Kiela, H. Schwenk, L. Barrault, A. Bordes (2018) [*Supervised Learning of Universal Sentence Representations from Natural Language Inference Data*](https://arxiv.org/pdf/1705.02364.pdf)
+<br />[8] P. Bojanowski*, E. Grave*, A. Joulin, T. Mikolov () [*Enriching Word Vectors with Subword Information*](https://arxiv.org/abs/1607.04606)
+<br />[9] H. Saif, M. Fernandez, Y. He, H. Alani (2014) [*On Stopwords, Filtering and Data Sparsity for Sentiment Analysis of Twitter*](http://www.lrec-conf.org/proceedings/lrec2014/pdf/292_Paper.pdf)
