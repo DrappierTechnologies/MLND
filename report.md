@@ -1,7 +1,7 @@
 # Machine Learning Engineer Nanodegree
 ## Capstone Project
-Joe Udacity  
-December 31st, 2050
+George Vargas
+November 2018
 
 ## I. Definition
 _(approx. 1-2 pages)_
@@ -11,17 +11,32 @@ In this section, look to provide a high-level overview of the project in layman’
 - _Has an overview of the project been provided, such as the problem domain, project origin, and related datasets or input data?_
 - _Has enough background information been given so that an uninformed reader would understand the problem domain and following problem statement?_
 
+The idea of investing in the U.S. stock market is often met with polarized opinions. On one hand hedge funds are leveraging data to make enormous amounts of money but on the other hand individual investors tend to lose large sums of money in their independent investment efforts. These vastly different experiences from these two equally different groups of investors create perceptions that match the experience. The negative perceptions of individual investors are such not because of a lack of confidence in the American business machine but more so because of the nature of the market itself. Markets are unpredictable, complex, and, for the most part, emotionally driven. Due to these and other factors the lay-investor often sees the market as a gambling establishment where losing their investment is a guarantee.
+
+Based on these perceptions the most logical reasoning for anyone attempting to invest in the market would be to follow in the footsteps of the hedge funds and use data to help inform investment decisions. Renaissance Technologies is a premier hedge fund known for hiring scientists and mathematicians over invesment bankers or brokers. This attempt at shifting the concept of investing in the stock market from a financial focus to a data-driven focus allowed them to generate 98.2 percent return on investment in 2008 as the housing-market crashed and the stock market followed.(R. Rubin and M. Collins 2015)
+
 ### Problem Statement
 In this section, you will want to clearly define the problem that you are trying to solve, including the strategy (outline of tasks) you will use to achieve the desired solution. You should also thoroughly discuss what the intended solution will be for this problem. Questions to ask yourself when writing this section:
 - _Is the problem statement clearly defined? Will the reader understand what you are expecting to solve?_
 - _Have you thoroughly discussed how you will attempt to solve the problem?_
 - _Is an anticipated solution clearly defined? Will the reader understand what results you are looking for?_
 
+Following the hedge fund reasoning of data-driven investment decisions the simplest form of investing requires buying low and selling when the price of the commodity is significantly higher than the initial purchase price. In this scenario, determining whether a specific stock will close the day up or down from it's current position would aid in making a successful investment decision for said day.
+
+Now consistently determining the directionality of stock prices is a non-trivial task and can be approach through a multitude of facets. Historically, investors have mainly used three philosophically different approaches in an attempt to predict the directionality of financial instruments: technical analysis, fundamental analysis, and quantitative analysis.
+
+While technical and fundamental analyses have their merits, the philosophical under pinnings of quantitative analysis have been proven themselves to be very lucrative for many hedge funds. 
+
+As previously mentioned, emotions are understood to have a large bearing on investment decisions within the financial markets and as such new headlines are a prime example of the ability to change emotions about a particular subject. Understanding this behavior, the most popular news headlines of the day will be used to predict the direction in which a specific index fund will close for said day. To keep this simple, the quantities of the directional movements will be ignored and only the directionality, "up" or "down" will be used as the dependent variable, effectively turning this into a classification problem.
+
 ### Metrics
 In this section, you will need to clearly define the metrics or calculations you will use to measure performance of a model or result in your project. These calculations and metrics should be justified based on the characteristics of the problem and problem domain. Questions to ask yourself when writing this section:
 - _Are the metrics you’ve chosen to measure the performance of your models clearly discussed and defined?_
 - _Have you provided reasonable justification for the metrics chosen based on the problem and solution?_
 
+Measurement of such an experiment will be vital to understanding the model's performance and any possible enhacements or additional uses outside of the current scope. Since the problem is framed as a classification the chosen metrics will be accuracy, precision, and recall.  While accuracy will provide a generalized understanding of the model's performance the F1-score will facilitate a more significant understanding of the performance. Finally, precision and recall will shed further light on the model's performance with respect to false positive and false negative predictions.
+
+- Add information about each metric and maybe equations
 
 ## II. Analysis
 _(approx. 2-4 pages)_
@@ -113,6 +128,11 @@ In this section, you will need to provide discussion as to how one aspect of the
 - _If you used your final solution as the new benchmark, do you think an even better solution exists?_
 
 -----------
+
+### References
+<br/>[R. Rubin and M. Collins (2015) "How an Exclusive Hedge Fund Turbocharged Its Retirement Plan"](https://www.bloomberg.com/news/articles/2015-06-16/how-an-exclusive-hedge-fund-turbocharged-retirement-plan)
+<br/>
+
 
 **Before submitting, ask yourself. . .**
 
