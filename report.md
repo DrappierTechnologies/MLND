@@ -48,17 +48,29 @@ In this section, you will be expected to analyze the data you are using for the 
 - _If a dataset is **not** present for this problem, has discussion been made about the input space or input data for your problem?_
 - _Are there any abnormalities or characteristics about the input space or dataset that need to be addressed? (categorical variables, missing values, outliers, etc.)_
 
+The dataset that will be used to tackle the problem of directional prediction of a financial instrument comes from the online community *Kaggle*. The user *Aaron7sun* has graciously provided the community with a dataset that combines the date, diretion of close, and the top twenty-five user-upvoted news headlines for the day. The dataset spans approximately eight years from August 2008 to July 2016. The provider of the dataset recommends using data from 2008-08-08 to 2014-12-31 for training, and data from 2015-01-02 to 2016-07-01 for testing since this splits the overall dataset in an 80/20 fashion.
+
+The time period proposed for training includes data from the crash of the markets in 2008, otherwise known as the Great Recession. This data is considered to be bearish in nature, or trending down. The data after the market bounced is considered bullish in nature, or trending up. It's generally accepted that the long-term behavior of markets follow a cycle. The data suggested for training captures two, possibly three, different phases in a cycle which could negatively affect the performance of any model. Additionally, it would be interesting to see if a model trained on bullish data could achieve similar performance on bearish data without retraining. For these reasons, the data leading up to April 2009 will be held out for additional testing on the generalizability of the model.
+
+Since the news headlines in the data are in a text format they will have to be transformed into vector representations in order to be used with any model. There are some rows which contain some empty values for some of the headlines, those empty cells will be filled with a zero after the data has been transformed into vector representations. The data includes a label column that utilizes a "0" for a close down and a "1" for a close up.
+
 ### Exploratory Visualization
 In this section, you will need to provide some form of visualization that summarizes or extracts a relevant characteristic or feature about the data. The visualization should adequately support the data being used. Discuss why this visualization was chosen and how it is relevant. Questions to ask yourself when writing this section:
 - _Have you visualized a relevant characteristic or feature about the dataset or input data?_
 - _Is the visualization thoroughly analyzed and discussed?_
 - _If a plot is provided, are the axes, title, and datum clearly defined?_
 
+From a cursory visualization of the bullish data set with the stopwords removed it can be seen that words such as "people", "world", "police", "new", "says", and "governement" dominate in frequency. Finding these words in these frequencies in the bullish dataset could lead to a basic hypothesis which considers these words as "prosperous" words in the media. Considering that "says" is the most frequent word in the bullish data it can be assumed that quoting people is very popular in a time of economic accumulation. Performing the same analysis on the bearish dataset yields an interesting initial discovery, namely, the words between the two datasets are quite similar but differ in frequency.
+
+The bearish data has a high frequency of words such as, "us", "gaza", "israel", "israeli", "b'the"(use of the word "the" at the beginning of headlines), "says", and "war". The word "says" is once again in the highest frequency words but it's a bit further down the ranking than in the bullish data. The words in either set are similar but differ in frequency which may speak to the nature of the data and the sentiment in the market at that point in time. The analysis performed on the bearish data could lead a the simple postulation that words associated with war and conflict, especially at a global scale have a negative impact on the financial markets. Considering the timeframe from which the data was collected and the fact that it is significantly smaller in volume than the bullish data it would be wise to test that postulation further before assuming it's validity.
+
 ### Algorithms and Techniques
 In this section, you will need to discuss the algorithms and techniques you intend to use for solving the problem. You should justify the use of each one based on the characteristics of the problem and the problem domain. Questions to ask yourself when writing this section:
 - _Are the algorithms you will use, including any default variables/parameters in the project clearly defined?_
 - _Are the techniques to be used thoroughly discussed and justified?_
 - _Is it made clear how the input data or datasets will be handled by the algorithms and techniques chosen?_
+
+
 
 ### Benchmark
 In this section, you will need to provide a clearly defined benchmark result or threshold for comparing across performances obtained by your solution. The reasoning behind the benchmark (in the case where it is not an established result) should be discussed. Questions to ask yourself when writing this section:
@@ -131,7 +143,7 @@ In this section, you will need to provide discussion as to how one aspect of the
 
 ### References
 <br/>[R. Rubin and M. Collins (2015) "How an Exclusive Hedge Fund Turbocharged Its Retirement Plan"](https://www.bloomberg.com/news/articles/2015-06-16/how-an-exclusive-hedge-fund-turbocharged-retirement-plan)
-<br/>
+<br /> [Aaron7sun (2016) *Dataset: Daily News for Stock Market Prediction*](https://www.kaggle.com/aaron7sun/stocknews#Combined_News_DJIA.csv)
 
 
 **Before submitting, ask yourself. . .**
