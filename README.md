@@ -22,7 +22,7 @@ You will need multiple libraries to run this notebook, namely:
 pip install numpy pandas torch zipfile fasttext plotly pathlib sklearn nltk
 ```
 
-The SNLI/MultiNLI datasets that fastText requires has already been included in both extracted and compressed formats and can be found in the fastText folder.(probably why the repo takes so long to pull down)
+The SNLI/MultiNLI datasets that fastText requires has already been included in a compressed format and can be found in the fastText folder.(probably why the repo takes so long to pull down)
 
 Running in a Windows Python 3 environment there is an issue with the InferSent library that requires two minor code changes. I could not include the fix as part of the submodule so this will have to be manually performed in order to get it working.
 
