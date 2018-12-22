@@ -1,5 +1,14 @@
+import nltk
+import numpy as np
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
 
-# stop word removal function
+nltk.download('punkt')
+nltk.download('stopwords')
+set(stopwords.words('english'))# stop word removal function
+
 def generate_stop_word_free_dataset(dataframe):
     df = dataframe.copy()
     # iterate over every column
@@ -22,7 +31,7 @@ def generate_stop_word_free_dataset(dataframe):
 def split_data(x_data, y_data, test_percent_size):
     return train_test_split(x_data, y_data, test_size=test_percent_size, random_state=42)
 
-def convert_sentences_to_vector_mean(dataframe):
+def convert_sentences_to_vector_mean(dataframe, infersent):
     df = dataframe.copy()
     # iterate over every column
     for column in dataframe.columns:
