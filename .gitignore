@@ -3,5 +3,7 @@
 ################################################################################
 
 /.vs
-/project/InferSent/
+/project/InferSent
 /project/.ipynb_checkpoints/
+/project/encoder
+/project/fastText
