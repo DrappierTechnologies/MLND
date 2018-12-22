@@ -22,8 +22,6 @@ You will need multiple libraries to run this notebook, namely:
 pip install numpy pandas torch zipfile fasttext plotly pathlib sklearn nltk
 ```
 
-The SNLI/MultiNLI datasets that fastText requires has already been included in a compressed format and can be found in the fastText folder.(probably why the repo takes so long to pull down)
-
 Running in a Windows Python 3 environment there is an issue with the InferSent library that requires two minor code changes. I could not include the fix as part of the submodule so this will have to be manually performed in order to get it working.
 
 ### IMPORTANT NOTE: THIS CODE CHANGE MAY NOT BE NECESSARY IN A LINUX PYTHON 3 ENVIRONMENT BUT I CANNOT CONFIRM THIS SINCE I HAVE NOT TESTED IT.
@@ -62,4 +60,15 @@ Running in a Windows Python 3 environment there is an issue with the InferSent l
         word_vec = {}
         with open(self.w2v_path, encoding="utf-8") as f:
   ```
-  * You're ready to roll
+## Prepping Datasets & Models
+
+In cell 2 and 3 there are commands to download and extract the dataset and model files needed for fastText and InferSent. If for any reason these do not function as expected please follow these steps to achieve the same result manually.
+
+* In the "project" folder create a new folder named "fastText"
+* Download the dataset from https://s3-us-west-1.amazonaws.com/fasttext-vectors/crawl-300d-2M.vec.zip (THIS WILL TAKE A WHILE)
+* Extract `crawl-300d-2M.vec.zip` into the "fastText" folder you created earlier
+* In the "project" folder create a new folder named "encoder"
+* Download the pretrained model from https://s3.amazonaws.com/senteval/infersent/infersent2.pkl
+* Place the `infersent2.pkl` file in the "encoder" folder you created earlier
+
+## Now You're Ready To Roll
