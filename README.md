@@ -6,7 +6,12 @@
 
 #### This setup is for a Windows Python 3 environment.
 
-You will need multiple libraries to run this notebook, namely:
+You could simply use the provided `requirements.txt` via
+```
+pip install -r requirements.txt
+```
+
+If you want to install packages independently these are the packages you'll need to to run this notebook:
 * numpy
 * pandas
 * torch
@@ -15,7 +20,7 @@ You will need multiple libraries to run this notebook, namely:
 * fasttext
 * plotly
 * pathlib
-* InferSent (included as a submodule)
+* InferSent (repo, no pip package available)
 * sklearn
 
 ```
