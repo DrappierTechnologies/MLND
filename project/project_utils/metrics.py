@@ -76,14 +76,7 @@ def draw_headline_distribution(bull_dataframe, bear_dataframe, filename, label):
     return py.iplot(figure, filename=filename)
 
 def draw_word_frequencies(dataframe, title, filename, least=False):
-    headline_list= []
-    for column in dataframe.columns:
-        if "top" in column:
-            sentences = dataframe[column].tolist()
-            headline_list += sentences
-        
-    headline_list = pd.DataFrame(headline_list)
-    headline_list = headline_list.replace("[b']", "", regex=True).replace("[-]", " ", regex=True).replace('[^a-zA-Z0-9\s]', '', regex=True)
+    headline_list = create_headline_word_count_column(dataframe)
     headline_word_counts = headline_list[0].str.split(expand=True).unstack().value_counts(ascending=least)
     data = [go.Bar(
                 x = headline_word_counts.index.values[0:25],
